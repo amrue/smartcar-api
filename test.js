@@ -34,10 +34,6 @@ describe('Vehicles', function() {
         res.body.should.have.property('color');
         res.body.should.have.property('doorCount');
         res.body.should.have.property('driveTrain');
-        res.body.vin.should.equal('123123412412');
-        res.body.color.should.equal('Metallic Silver');
-        res.body.doorCount.should.equal(4);
-        res.body.driveTrain.should.equal('v8');
         done();
       });
   });
@@ -130,5 +126,30 @@ chai.request(server.app)
     done();
   });
 });
+
+});
+
+
+describe('Error Handling', function() {
+
+    it('should return a 404 if the ID does not exist', function(done) {
+    chai.request(server.app)
+      .get('/vehicles/99999')
+      .end(function(err, res){
+        res.should.have.status(404);
+        done();
+      });
+  });
+
+  it('should return 400 on bad request', function(done) {
+  chai.request(server.app)
+    .post('/vehicles/1235/engine')
+    .send({'action': 'foo'})
+    .end(function(err, res){
+      res.should.have.status(400);
+      res.error.text.should.equal('Unknown Action: foo');
+      done();
+    });
+  });
 
 });
