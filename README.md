@@ -23,4 +23,4 @@ This API was built with:
 Unit tests should display as shown below:
 
 ![Image of Unit Tests]
-(http://i.imgur.com/XrUmWcb.png)
+(http://i.imgur.com/wgLjIyM.png)
