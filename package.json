@@ -1,0 +1,14 @@
+{
+  "name": "smartcar-api",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "4.14.0",
+    "request": "^2.74.0"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "chai-http": "*",
+    "mocha": "*"
+  }
+}
