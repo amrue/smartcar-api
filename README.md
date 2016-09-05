@@ -9,18 +9,24 @@ This API was built with:
 
 ## Requirements
 
-- Node and npm
+- Node (v4.4.3) and npm (v3.8.6)
 
 ## Installation
 
 - Install dependencies: `npm install`
-- Start the server: `node server.js`
+- Start the server: `node ./src/start.js`
 
 ## Testing the API
 - Test the API using [Postman](https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop)
-- To run unit tests: `./node_modules/mocha/bin/mocha`
+- To run tests: `npm test`
+- To check code coverage: `npm run coverage` followed by `open coverage/lcov-report/index.html` to view the HTML report
 
 Unit tests should display as shown below:
 
 ![Image of Unit Tests]
-(http://i.imgur.com/XrUmWcb.png)
+(http://i.imgur.com/9usoDOV.png)
+
+Coverage:
+
+![Image of Coverage Test]
+(http://i.imgur.com/mJe4k9I.png)

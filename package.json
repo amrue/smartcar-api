@@ -1,6 +1,6 @@
 {
   "name": "smartcar-api",
-  "main": "server.js",
+  "main": "start.js",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "4.14.0",
@@ -9,6 +9,12 @@
   "devDependencies": {
     "chai": "*",
     "chai-http": "*",
-    "mocha": "*"
+    "istanbul": "^0.4.5",
+    "mocha": "*",
+    "nock": "^8.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --recursive"
   }
 }
